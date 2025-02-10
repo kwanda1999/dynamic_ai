@@ -1,17 +1,19 @@
 /* src/styles.css */
 @import "../node_modules/bootstrap/dist/css/bootstrap.css"; 
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Phetsarath:wght@400;700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
 
 body {
-    background: rgb(45, 147, 213);
-    background: linear-gradient(0deg, rgb(126, 197, 204) 0%, rgba(45, 147, 213, 1) 100%);
-    background-repeat: repeat-x;
-    height: 100vh; /* Ensure the body takes up the full height of the viewport */
-    margin: 0; /* Remove default margin */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Text color */
-    /* font-family: 'Dark Grotesque', sans-serif; */
-  }
+  background: linear-gradient(to bottom, black, rgb(88, 88, 88)) fixed;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
   header {
     text-align: center;
     padding: 50px;
@@ -20,18 +22,12 @@ body {
   }
 
   .logo {
-    font-size:  50px;
-    
-  }
-
-  .navigation-bar{
-    padding-top: 20px;
-    padding-left: 30px;
-    ;
+    font-size:  40px;
+    margin-left: 30px;
   }
 
   .navbar-nav .nav-item {
-    margin-right: 30px; /* Adjust spacing between each nav bar item */
+    margin-right: 10px; /* Adjust spacing between each nav bar item */
   }
 
   .navbar-nav .nav-item:last-child {
@@ -47,13 +43,10 @@ body {
     padding-left: 100px;
   }
 
-  .container {
-    padding-top: 100px;
-  }
-
   .heading {
     font-size: 80px;
-    line-height: 1.5;
+    line-height: 1;
+    padding-bottom: 40px;
   }
 
   .section_one{
@@ -63,17 +56,101 @@ body {
     font-size: 20px;
   }
 
-  .learn-button{
+  /* .learn-button{
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #ffffff;
-    color: #000000;
-    font-weight: 500;
+    background-color: transparent;
+    color: white;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
+  } */
+
+  .custom-button {
+    color: white;
+    border-color: lime;
+    background-color: transparent;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 40px
+  }
+  
+  .custom-button:hover {
+    color: white;
   }
 
   .side-nav{
-    margin-left: 650px;
+    margin-left: 440px;
+  }
+
+  .home-paragraph {
+    max-width: 800px;
+    text-align: justify;
   }
   
+  .landing-body{
+    margin-left: 40px;
+  }
+
+  .heading2{
+    text-align: center ;
+    font-weight: 700;
+    font-size: 60px;
+    margin-left: 450px;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+
+  }
+
+  .heading3{
+    font-weight: 500;
+    font-size: 40px;
+  }
+
+  .details {
+    font-size: 35px;
+    font-weight: 700;
+    color: #7d00f1;
+  }
+
+  .home-paragraph2 {
+    text-align: justify;
+    max-width: 700px;
+    margin: 0 auto; /* Centers the paragraph horizontally */
+    padding: 20px; /* Optional: adds some breathing room around the text */
+  }
+  
+  /* Optional: If you want additional centering control */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+  }
+
+  .button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .start-button{
+    background-color: lime;
+    padding: 15px;
+    font-weight: 600;
+    border-radius: 40px;
+  }
